@@ -17,6 +17,7 @@ export default React.createClass({
 
   render() {
     const { repo, labels } = this.props;
+    const link = `https://github.com/${repo.full_name}`;    
     if(this.props.repo.length <= 0 ) {
       return <ProgressBar />;
     }
@@ -24,7 +25,9 @@ export default React.createClass({
     return (
       <div class="container">
         <div class="repo-header">
-          <h1 class="repo-title--detail">{repo.full_name}</h1>
+          <h1 class="repo-title--detail">
+            <a href={link} target="_blank">{repo.full_name}</a>
+          </h1>
           <a class="button button--back" href="/repos">Back</a>
         </div>
         <p>

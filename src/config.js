@@ -3,9 +3,9 @@ const config = {
     authUrl: 'https://labelr-localhost.herokuapp.com/authenticate/',
     clientID: 'f8dd69187841cdd22a26'
   },
-  'githubrzr.herokuapp.com': {
-    authUrl: 'https://gitauth.herokuapp.com/authenticate/',
-    clientID: '96855ea1c6d5749fe693'
+  'githuberizer.herokuapp.com': {
+    authUrl: 'https://gitoauth.herokuapp.com/authenticate/',
+    clientID: 'ec90895a4e16d53fdd99'
   }
 }[location.hostname];
 
