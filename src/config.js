@@ -3,8 +3,9 @@ const config = {
     authUrl: 'https://labelr-localhost.herokuapp.com/authenticate/',
     clientID: 'f8dd69187841cdd22a26'
   },
-  'lablr.surge.sh': {
-
+  'githubrzr.herokuapp.com': {
+    authUrl: 'https://gitauth.herokuapp.com/authenticate/',
+    clientID: '96855ea1c6d5749fe693'
   }
 }[location.hostname];
 
