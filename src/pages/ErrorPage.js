@@ -18,7 +18,7 @@ export default class ErrorPage extends Component {
         <div class="container">
           <h2>{ title }</h2>
           <h3>{ body }</h3>
-          <a class="button button--back" href="/">Back</a>
+          <a class="button button--back" href="/repos">Back</a>
         </div>
       );
     }

@@ -52,7 +52,7 @@ export default Router.extend({
   },
   repos() {
     this.renderPage(<ReposPage repos={ app.user.repos } />);
-  },
+  },  
   RepoDetail(owner, name) {
     const model = app.user.repos.getByRepoName(owner+ '/' + name);
     this.renderPage(<RepoDetail repo={ model } labels={ model.labels } />);

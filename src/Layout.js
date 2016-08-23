@@ -14,8 +14,9 @@ export default React.createClass({
           <input id="menu-toggle" class="menu-toggle" type="checkbox"/>
           <label htmlFor="menu-toggle">Menu</label>
           <ul class="list-unstyled list-inline cf">
-            <li class="main-logo">Labelr</li>
+            <li class="main-logo">Githbrzr</li>
             <li><a href="/repos">Repos</a></li>
+            <li><a href="/search">Search</a></li>
             <li class="pull-right">
               <a class="octicon octicon-sign-out" href="/logout">Logout</a>
               <span class="user-login">{user.login}</span>

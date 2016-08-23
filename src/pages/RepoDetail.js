@@ -15,9 +15,13 @@ export default React.createClass({
     }, {at: 0});
   },
 
+  componentWillUnmount() {
+    this.setState({ labels: this.props.labels });
+  },
+
   render() {
     const { repo, labels } = this.props;
-    const link = `https://github.com/${repo.full_name}`;    
+    const link = `https://github.com/${repo.full_name}`;
     if(this.props.repo.length <= 0 ) {
       return <ProgressBar />;
     }
