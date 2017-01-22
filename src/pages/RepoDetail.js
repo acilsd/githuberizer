@@ -13,11 +13,7 @@ export default React.createClass({
       editing: true,
       saved: false
     }, {at: 0});
-  },
-
-  componentWillUnmount() {
-    this.setState({ labels: this.props.labels });
-  },
+  }, 
 
   render() {
     const { repo, labels } = this.props;

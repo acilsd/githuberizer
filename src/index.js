@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import app from 'ampersand-app';
 import User from './models/user';
 import Router from './routes';

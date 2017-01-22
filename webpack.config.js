@@ -5,10 +5,12 @@ const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 module.exports = {
   context: path.join(__dirname, '/src'),
-  entry: ['babel-polyfill', './index'],
+  entry: ['./index'],
   output: {
     path: path.join(__dirname, '/build'),
     publicPath: '/',
@@ -21,6 +23,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
@@ -49,15 +52,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: [ 'style', 'css' ]
-      },
-      {
-        test: /\.scss$/,
-        loaders: [ 'style', 'css?sourceMap', 'postcss', 'sass?sourceMap' ]
+        loaders: ['style','css']
       },
       {
         test: /\.styl$/,
-        loaders: [ 'style', 'css?sourceMap', 'postcss', 'stylus']
+        loaders: ['style', 'css', 'postcss', 'stylus']
       }
     ]
   },

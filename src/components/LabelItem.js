@@ -6,7 +6,7 @@ export default React.createClass({
   getInitialState() {
     const { name, color } = this.props.label;
     return { name, color };
-  },  
+  },
 
   handleDelete(e) {
     e.preventDefault();
